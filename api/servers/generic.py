@@ -14,6 +14,7 @@ PLATFORM_API_URLS: Dict[str, str] = {
     "cerebras": "https://api.cerebras.ai/v1/chat/completions",
     "nvidia": "https://integrate.api.nvidia.com/v1/chat/completions",
     "sambanova": "https://api.sambanova.ai/v1/chat/completions",
+    "xai": "https://api.x.ai/v1/chat/completions",
 }
 
 

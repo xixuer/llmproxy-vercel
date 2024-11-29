@@ -1,12 +1,18 @@
 from pydantic import BaseModel, Field
 import httpx
 import asyncio
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Union
+
+
+class MessageContent(BaseModel):
+    type: str
+    text: Optional[str] = None
+    image_url: Optional[Dict[str, str]] = None
 
 
 class Message(BaseModel):
     role: str
-    content: str
+    content: Union[str, List[MessageContent]]
 
 
 class OpenAIProxyArgs(BaseModel):

@@ -118,3 +118,12 @@ async def test_sambanova():
         api_key=os.environ["SAMBANOVA_API_KEY"],
         model="Meta-Llama-3.1-405B-Instruct",
     )
+
+
+@pytest.mark.asyncio
+async def test_xai_streaming():
+    await make_request(
+        supplier="xai",
+        api_key=os.environ["XAI_API_KEY"],
+        model="grok-vision-beta"
+    )
